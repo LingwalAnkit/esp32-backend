@@ -32,6 +32,7 @@ exports.getParkingData = async (req, res) => {
 exports.updateParkingData = async (req, res) => {
   try {
     const { total, occupied } = req.body;
+    console.log('Received parking data:', req.body);
     
     // Validate data
     if (total === undefined || occupied === undefined) {
@@ -70,6 +71,7 @@ exports.updateParkingData = async (req, res) => {
       available,
       lastUpdated: new Date().toISOString()
     };
+    console.log('Parking data before saving:', parkingData);
     
     console.log('Parking data updated:', parkingData);
     
