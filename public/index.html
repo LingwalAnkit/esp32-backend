@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Parking System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Smart Parking System</h1>
+      <p class="subtitle">Real-time parking availability</p>
+    </header>
+    
+    <div class="parking-status-container">
+      <div id="parking-status" class="status-available">Parking Available</div>
+      <div class="last-updated">Last updated: <span id="last-updated">just now</span></div>
+    </div>
+    
+    <div class="stats-container">
+      <div class="stat-box">
+        <h3>Available</h3>
+        <div id="available-spots" class="stat-value">10</div>
+      </div>
+      <div class="stat-box">
+        <h3>Occupied</h3>
+        <div id="occupied-spots" class="stat-value">0</div>
+      </div>
+      <div class="stat-box">
+        <h3>Total</h3>
+        <div id="total-spots" class="stat-value">10</div>
+      </div>
+      <div class="stat-box">
+        <h3>Occupancy</h3>
+        <div id="occupancy-rate" class="stat-value">0%</div>
+      </div>
+    </div>
+    
+    <div class="connection-status">
+      <div id="connection-indicator" class="connected"></div>
+      <span id="connection-text">Connected</span>
+    </div>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
